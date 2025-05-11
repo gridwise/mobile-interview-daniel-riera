@@ -1,4 +1,4 @@
-# 🧪 Rick & Morty Explorer App
+# 🧪 Rick & Morty Character App
 
 A React Native app to browse characters from the Rick and Morty universe, featuring infinite scroll, custom theming, and fully animated loading and error screens — all with a touch of Schwifty!
 
@@ -22,6 +22,10 @@ A React Native app to browse characters from the Rick and Morty universe, featur
 ### Loading Indicator
 
 ![Loading Screen](https://github.com/user-attachments/assets/7c041f3a-21fa-4f30-afe7-d097419f5256)
+
+### Test Coverage
+
+![Screenshot 2025-05-11 at 12 42 23 PM](https://github.com/user-attachments/assets/7dddc3f0-e192-4910-9e4d-b213461c0b06)
 
 ---
 
