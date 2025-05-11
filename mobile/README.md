@@ -8,21 +8,20 @@ A React Native app to browse characters from the Rick and Morty universe, featur
 
 ### Main Character Screen
 
-> _Shows the character list with header and infinite scroll._
+![Main Screen](https://github.com/user-attachments/assets/60b32581-bd7d-4ba4-b61c-6be869dd538c)
 
-![Main Screen]()
 
 ---
 
 ### Error Screen
 
-![Error Screen]()
+![Error Screen](https://github.com/user-attachments/assets/b7e0d048-263a-4234-bb55-82046d08b29e)
 
 ---
 
 ### Loading Indicator
 
-![Loading Screen]()
+![Loading Screen](https://github.com/user-attachments/assets/7c041f3a-21fa-4f30-afe7-d097419f5256)
 
 ---
 
@@ -41,18 +40,6 @@ A React Native app to browse characters from the Rick and Morty universe, featur
 npm install
 npm run ios | npm run android
 ```
-
-## Structure
-
-components/
-├── character-card/
-├── error-screen/
-├── ui/
-hooks/
-└── useCharacters.ts
-types/
-assets/
-└── images/
 
 ## API
 
