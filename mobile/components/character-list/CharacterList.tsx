@@ -8,7 +8,16 @@ import Header from "@/components/header";
 import ErrorMessage from "@/components/error-message";
 
 const CharacterList: React.FC = () => {
-  const { data, isLoading, isError, refetch } = useCharacters();
+  const {
+    data,
+    isLoading,
+    isError,
+    refetch,
+    isFetchingNextPage,
+    fetchNextPage,
+    hasNextPage,
+  } = useCharacters();
+  const characters = data?.pages.flatMap((page) => page.data) ?? [];
 
   if (isError) {
     return <ErrorMessage onRetry={refetch} />;
@@ -23,11 +32,18 @@ const CharacterList: React.FC = () => {
             title="Morty, These Are Our People!"
           />
         }
-        data={data}
+        data={characters}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => <CharacterCard character={item} />}
         ItemSeparatorComponent={() => <HorizontalDivider />}
         showsVerticalScrollIndicator={false}
+        onEndReached={() => {
+          if (hasNextPage && !isFetchingNextPage) {
+            fetchNextPage();
+          }
+        }}
+        onEndReachedThreshold={0.5}
+        ListFooterComponent={isFetchingNextPage ? <LoadingIndicator /> : null}
       />
       {isLoading && <LoadingIndicator />}
     </>
