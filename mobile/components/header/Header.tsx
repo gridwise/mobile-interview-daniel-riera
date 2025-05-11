@@ -10,7 +10,7 @@ import { ThemedView } from "../ui/ThemedView";
 import { ThemedText } from "../ui/ThemedText";
 import { styles } from "./Header.styles";
 
-type Props = {
+type HeaderProps = {
   image: ImageSourcePropType;
   title?: string;
   containerStyle?: ViewStyle;
@@ -18,7 +18,7 @@ type Props = {
   titleStyle?: TextStyle;
 };
 
-const Header: React.FC<Props> = ({
+const Header: React.FC<HeaderProps> = ({
   image,
   title,
   containerStyle,

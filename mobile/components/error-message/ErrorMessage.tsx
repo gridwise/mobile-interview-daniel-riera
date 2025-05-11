@@ -5,14 +5,14 @@ import { ThemedText } from "@/components/ui/ThemedText";
 import ActionButton from "@/components/ui/action-button";
 import { styles } from "./ErrorMessage.styles";
 
-type Props = {
+type ErrorScreenProps = {
   image?: ImageSourcePropType;
   message?: string;
   onRetry?: () => void;
   retryLabel?: string;
 };
 
-const ErrorScreen: React.FC<Props> = ({
+const ErrorScreen: React.FC<ErrorScreenProps> = ({
   image = require("@/assets/images/error-message.png"),
   message = "Aw jeez, Rick... something broke!",
   onRetry,

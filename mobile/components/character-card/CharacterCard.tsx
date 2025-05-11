@@ -1,17 +1,23 @@
 import React from "react";
 import { View, Image } from "react-native";
-import { Character } from "@/types/CharacterType";
 import { ThemedView } from "@/components/ui/ThemedView";
 import { ThemedText } from "@/components/ui/ThemedText";
 import { styles } from "./CharacterCard.styles";
 import { Spacing } from "@/constants/Spacing";
 import { Colors } from "@/constants/Colors";
 
-type Props = {
-  character: Character;
+type CharacterProps = {
+  character: {
+    id: number;
+    name: string;
+    status: string;
+    species: string;
+    image: string;
+    episode: string[];
+  };
 };
 
-const CharacterCard: React.FC<Props> = ({ character }) => {
+const CharacterCard: React.FC<CharacterProps> = ({ character }) => {
   return (
     <ThemedView
       padding={Spacing.sm}

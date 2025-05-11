@@ -3,14 +3,14 @@ import React from "react";
 import { View, ViewStyle } from "react-native";
 import { Colors } from "@/constants/Colors";
 
-type Props = {
+type HorizontalDividerProps = {
   height?: number;
   color?: string;
   style?: ViewStyle;
   marginVertical?: number;
 };
 
-const HorizontalDivider: React.FC<Props> = ({
+const HorizontalDivider: React.FC<HorizontalDividerProps> = ({
   height = 2,
   color = Colors.dividerDefault,
   style,

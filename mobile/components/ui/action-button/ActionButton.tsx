@@ -3,14 +3,19 @@ import { TouchableOpacity, ViewStyle, TextStyle } from "react-native";
 import { ThemedText } from "../ThemedText";
 import { styles } from "./ActionButton.styles";
 
-type Props = {
+type ActionButtonProps = {
   text: string;
   onPress: () => void;
   style?: ViewStyle;
   textStyle?: TextStyle;
 };
 
-const ActionButton: React.FC<Props> = ({ text, onPress, style, textStyle }) => {
+const ActionButton: React.FC<ActionButtonProps> = ({
+  text,
+  onPress,
+  style,
+  textStyle,
+}) => {
   return (
     <TouchableOpacity style={[styles.button, style]} onPress={onPress}>
       <ThemedText style={textStyle}>{text}</ThemedText>

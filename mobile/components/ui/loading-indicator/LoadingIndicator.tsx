@@ -4,14 +4,14 @@ import { ThemedText } from "@/components/ui/ThemedText";
 import { styles } from "./LoadingIndicator.styles";
 import { ThemedView } from "../ThemedView";
 
-type Props = {
+type LoadingIndicatorProps = {
   duration?: number;
   message?: string;
   size?: number;
   source?: ImageSourcePropType;
 };
 
-const LoadingIndicator: React.FC<Props> = ({
+const LoadingIndicator: React.FC<LoadingIndicatorProps> = ({
   duration = 3000,
   message = "Wubba Lubba Dub Dub... Loading!",
   size = 80,
