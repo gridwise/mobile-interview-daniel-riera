@@ -45,7 +45,7 @@ const LoadingIndicator: React.FC<LoadingIndicatorProps> = ({
           transform: [{ rotate }],
         }}
       />
-      <ThemedText>{message}</ThemedText>
+      <ThemedText testID="loading-message">{message}</ThemedText>
     </ThemedView>
   );
 };

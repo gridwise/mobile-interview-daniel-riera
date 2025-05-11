@@ -26,6 +26,7 @@ const CharacterList: React.FC = () => {
   return (
     <>
       <FlatList
+        testID="character-flat-list"
         ListHeaderComponent={
           <Header
             image={require("@/assets/images/header-image.png")}

@@ -21,7 +21,9 @@ const ErrorScreen: React.FC<ErrorScreenProps> = ({
   return (
     <ThemedView style={styles.container}>
       <Image source={image} style={styles.image} resizeMode="contain" />
-      <ThemedText type="title">{message}</ThemedText>
+      <ThemedText testID="error-message" type="title">
+        {message}
+      </ThemedText>
       {onRetry && <ActionButton text={retryLabel} onPress={onRetry} />}
     </ThemedView>
   );

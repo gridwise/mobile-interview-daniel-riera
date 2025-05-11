@@ -17,7 +17,11 @@ const ActionButton: React.FC<ActionButtonProps> = ({
   textStyle,
 }) => {
   return (
-    <TouchableOpacity style={[styles.button, style]} onPress={onPress}>
+    <TouchableOpacity
+      testID="action-button"
+      style={[styles.button, style]}
+      onPress={onPress}
+    >
       <ThemedText style={textStyle}>{text}</ThemedText>
     </TouchableOpacity>
   );
