@@ -5,6 +5,7 @@ export const styles = StyleSheet.create({
   card: {
     flexDirection: "row",
     borderRadius: 10,
+    padding: Spacing.sm,
   },
   image: {
     width: 150,

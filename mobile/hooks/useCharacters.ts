@@ -4,7 +4,7 @@ import axios from "axios";
 const fetchCharacters = async ({ pageParam = 1 }) => {
   try {
     const response = await axios.get(
-      `https://rickandmortyapi.com/api/charactr?page=${pageParam}`
+      `https://rickandmortyapi.com/api/character?page=${pageParam}`
     );
     return {
       data: response.data.results,

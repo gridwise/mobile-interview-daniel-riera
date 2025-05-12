@@ -30,11 +30,7 @@ export default function HomeScreen() {
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-        <ThemedView
-          useSafeArea
-          padding={Spacing.xxl}
-          style={[styles.container]}
-        >
+        <ThemedView useSafeArea style={styles.container}>
           <CharacterList />
         </ThemedView>
         <StatusBar style="auto" />
@@ -46,5 +42,6 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    padding: Spacing.xxl,
   },
 });

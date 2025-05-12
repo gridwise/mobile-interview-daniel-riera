@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   },
   tertiary: {
     fontSize: 12,
-    fontWeight: "300",
+    fontWeight: "600",
     color: Colors.tertiaryText,
   },
 });

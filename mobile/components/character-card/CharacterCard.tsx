@@ -4,7 +4,6 @@ import { ThemedView } from "@/components/ui/ThemedView";
 import { ThemedText } from "@/components/ui/ThemedText";
 import { styles } from "./CharacterCard.styles";
 import { Spacing } from "@/constants/Spacing";
-import { Colors } from "@/constants/Colors";
 
 type CharacterProps = {
   character: {
@@ -19,12 +18,7 @@ type CharacterProps = {
 
 const CharacterCard: React.FC<CharacterProps> = ({ character }) => {
   return (
-    <ThemedView
-      padding={Spacing.sm}
-      style={styles.card}
-      lightColor={Colors.light.card}
-      darkColor={Colors.dark.card}
-    >
+    <ThemedView style={styles.card} variant="card">
       <Image source={{ uri: character?.image }} style={styles.image} />
       <View style={styles.infoContainer}>
         <View>

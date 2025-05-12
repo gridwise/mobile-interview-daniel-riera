@@ -5,32 +5,30 @@ import { useThemeColor } from "@/hooks/useThemeColor";
 export type ThemedViewProps = ViewProps & {
   lightColor?: string;
   darkColor?: string;
-  padding?: number;
   useSafeArea?: boolean;
+  variant?: "background" | "card";
 };
 
 export function ThemedView({
   style,
   lightColor,
   darkColor,
-  padding,
   useSafeArea,
+  variant = "background",
   ...otherProps
 }: ThemedViewProps) {
   const backgroundColor = useThemeColor(
     { light: lightColor, dark: darkColor },
-    "background"
+    variant
   );
 
-  const baseStyle = [{ backgroundColor, padding }, style];
+  const baseStyle = [{ backgroundColor }, style];
 
-  if (useSafeArea) {
-    return (
-      <SafeAreaView style={[{ flex: 1, backgroundColor }]}>
-        <View style={baseStyle} {...otherProps} />
-      </SafeAreaView>
-    );
-  }
-
-  return <View style={baseStyle} {...otherProps} />;
+  return useSafeArea ? (
+    <SafeAreaView style={[{ flex: 1, backgroundColor }]}>
+      <View style={baseStyle} {...otherProps} />
+    </SafeAreaView>
+  ) : (
+    <View style={baseStyle} {...otherProps} />
+  );
 }
