@@ -25,7 +25,9 @@ A React Native app to browse characters from the Rick and Morty universe, featur
 
 ### Test Coverage
 
-![Screenshot 2025-05-11 at 12 42 23 PM](https://github.com/user-attachments/assets/7dddc3f0-e192-4910-9e4d-b213461c0b06)
+![Screenshot 2025-05-12 at 6 24 17 PM](https://github.com/user-attachments/assets/427c34fc-84aa-422d-8cf7-2c63005111c1)
+
+
 
 ---
 
