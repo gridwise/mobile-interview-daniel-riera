@@ -7,10 +7,10 @@ export const Colors = {
   dark: {
     text: "#ffffff",
     background: "#151718",
-    card: "#d5c8b8",
+    card: "#654321",
   },
   dividerDefault: "#ccc",
   activityIndicator: "#888",
-  tertiaryText: "#636363",
+  tertiaryText: "#000000",
   portalGreen: "#1b8a1a",
 };

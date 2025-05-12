@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Animated, Easing, View, ImageSourcePropType } from "react-native";
+import { Animated, Easing, ImageSourcePropType } from "react-native";
 import { ThemedText } from "@/components/ui/ThemedText";
 import { styles } from "./LoadingIndicator.styles";
 import { ThemedView } from "../ThemedView";

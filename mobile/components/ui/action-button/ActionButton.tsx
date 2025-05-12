@@ -1,5 +1,5 @@
 import React from "react";
-import { TouchableOpacity, ViewStyle, TextStyle } from "react-native";
+import { ViewStyle, TextStyle, Pressable } from "react-native";
 import { ThemedText } from "../ThemedText";
 import { styles } from "./ActionButton.styles";
 
@@ -17,13 +17,13 @@ const ActionButton: React.FC<ActionButtonProps> = ({
   textStyle,
 }) => {
   return (
-    <TouchableOpacity
+    <Pressable
       testID="action-button"
       style={[styles.button, style]}
       onPress={onPress}
     >
       <ThemedText style={textStyle}>{text}</ThemedText>
-    </TouchableOpacity>
+    </Pressable>
   );
 };
 

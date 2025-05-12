@@ -12,4 +12,7 @@ export const styles = StyleSheet.create({
     height: 200,
     marginBottom: Spacing.sm,
   },
+  message: {
+    textAlign: "center",
+  },
 });

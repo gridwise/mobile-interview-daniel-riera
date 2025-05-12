@@ -7,21 +7,21 @@ import { styles } from "./ErrorMessage.styles";
 
 type ErrorScreenProps = {
   image?: ImageSourcePropType;
-  message?: string;
+  message: string;
   onRetry?: () => void;
   retryLabel?: string;
 };
 
 const ErrorScreen: React.FC<ErrorScreenProps> = ({
   image = require("@/assets/images/error-message.png"),
-  message = "Aw jeez, Rick... something broke!",
+  message,
   onRetry,
   retryLabel = "Try Again",
 }) => {
   return (
     <ThemedView style={styles.container}>
       <Image source={image} style={styles.image} resizeMode="contain" />
-      <ThemedText testID="error-message" type="title">
+      <ThemedText style={styles.message} testID="error-message" type="title">
         {message}
       </ThemedText>
       {onRetry && <ActionButton text={retryLabel} onPress={onRetry} />}

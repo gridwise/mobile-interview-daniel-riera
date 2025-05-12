@@ -11,6 +11,7 @@ const CharacterList: React.FC = () => {
   const {
     data,
     isLoading,
+    error,
     isError,
     refetch,
     isFetchingNextPage,
@@ -20,7 +21,7 @@ const CharacterList: React.FC = () => {
   const characters = data?.pages.flatMap((page) => page.data) ?? [];
 
   if (isError) {
-    return <ErrorMessage onRetry={refetch} />;
+    return <ErrorMessage onRetry={refetch} message={error?.message} />;
   }
 
   return (
